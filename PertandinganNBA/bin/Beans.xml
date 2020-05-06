@@ -10,7 +10,7 @@
 	
 	<aop:aspectj-autoproxy />
 	
-   <bean id = "pertandingan1" class = "model.PertandinganNBA">
+   <bean id = "pertandingan1" class = "com.group10.model.PertandinganNBA">
    		<property name = "date" value = "2020-01-01"/>
    		<property name = "homeTeam" value = "Washington Wizards"/>
    		<property name = "awayTeam" value = "Orlando Magic"/>
@@ -21,7 +21,7 @@
       	<property name = "finalScore" value = "122-101"/>
    </bean>
 	
-	<bean name="pertandinganNBAController" class="controller.PertandinganNBAController" autowire="byName"/>
+	<bean name="pertandinganNBAController" class="com.group10.controller.PertandinganNBAController" autowire="byName"/>
 
-	<bean name="loggingAspect" class="aspect.LoggingAspect"/>
+	<bean name="loggingAspect" class="com.group10.aspect.LoggingAspect"/>
 </beans>
