@@ -9,16 +9,16 @@ import org.springframework.stereotype.Repository;
 import com.group10.model.*;
 
 @Repository
-public interface PertandinganNBARepository extends MongoRepository {
-	@Query("{ 'id' : ?0 }")
-	List<PertandinganNBA> findByid(String id);
+public interface PertandinganNBARepository extends MongoRepository<PertandinganNBA, String> {
+	@Query("{ '_id' : ?0 }")
+	PertandinganNBA findByid(String id);
 	
-	@Query("{ 'date' : ?0 }")
+	@Query(value = "{ 'date' : ?0 }")
 	List<PertandinganNBA> findByDate(String date);
 	
-	@Query("{ 'homeTeam' : ?0 }")
+	@Query(value = "{ 'homeTeam' : ?0 }")
 	List<PertandinganNBA> findByHomeTeam(String homeTeam);
 	
-	@Query("{ 'awayTeam' : ?0 }")
+	@Query(value = "{ 'awayTeam' : ?0 }")
 	List<PertandinganNBA> findByAwayTeam(String awayTeam);
 }

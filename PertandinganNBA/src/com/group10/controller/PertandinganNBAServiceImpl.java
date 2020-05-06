@@ -44,7 +44,7 @@ public class PertandinganNBAServiceImpl implements PertandinganNBAService {
 	@Override
 	public PertandinganNBA findByid(String id) {
 		// TODO Auto-generated method stub
-		return pertandinganNBARepo.findByid(id).get(0);
+		return pertandinganNBARepo.findByid(id);
 	}
 
 	@Override

@@ -4,9 +4,12 @@
    xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
    xmlns:aop = "http://www.springframework.org/schema/aop"
    xmlns:context = "http://www.springframework.org/schema/acontext"
+   xmlns:mongo="http://www.springframework.org/schema/data/mongo"
    xsi:schemaLocation = "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
    		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
-   		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-context-2.5.xsd">
+   		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-context-2.5.xsd
+   		http://www.springframework.org/schema/data/mongo
+        http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd">
 	
 	<aop:aspectj-autoproxy />
 	
@@ -19,6 +22,17 @@
       	<property name = "thirdQuarterScore" value = "32-25"/>
       	<property name = "fourthQuarterScore" value = "28-18"/>
       	<property name = "finalScore" value = "122-101"/>
+   </bean>
+   
+   <bean id = "pertandingan2" class = "com.group10.model.PertandinganNBA">
+   		<property name = "date" value = "2020-03-10"/>
+   		<property name = "homeTeam" value = "Golden State Warriors"/>
+   		<property name = "awayTeam" value = "Los Angeles Clippers"/>
+      	<property name = "firstQuarterScore" value = "35-26"/>
+      	<property name = "secondQuarterScore" value = "41-22"/>
+      	<property name = "thirdQuarterScore" value = "35-29"/>
+      	<property name = "fourthQuarterScore" value = "20-30"/>
+      	<property name = "finalScore" value = "131-107"/>
    </bean>
 	
 	<bean name="pertandinganNBAController" class="com.group10.controller.PertandinganNBAController" autowire="byName"/>

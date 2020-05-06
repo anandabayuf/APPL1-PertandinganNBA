@@ -16,7 +16,9 @@ public class PertandinganNBA {
    private String thirdQuarterScore;
    private String fourthQuarterScore;
    
-   
+   public PertandinganNBA() {
+	   
+   }
    
    public PertandinganNBA(String date, String homeTeam, String awayTeam, String finalScore, String firstQuarterScore,
 		String secondQuarterScore, String thirdQuarterScore, String fourthQuarterScore) {
